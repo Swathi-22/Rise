@@ -1,0 +1,75 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="مطاعم رايز كورنر">
+    <meta name="author" content="مطاعم رايز كورنر">
+
+    <title>مطاعم رايز كورنر</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'web/img/favicon.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'web/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/line-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/food-icon.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/slider.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/venobox.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/slick.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/splitting-cells.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/splitting.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/keyframe-animation.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/responsive.css' %}">
+
+</head>
+
+<body class="header-1">
+
+    {% include 'web/partials/header.html' %}
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'web/partials/footer.html' %}
+
+
+
+    <!-- jQuery Lib -->
+    <script src="{% static 'web/js/vendor/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/jquery.isotope.v3.0.2.js' %}"></script>
+    <script src="{% static 'web/js/vendor/splitting.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/slick.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/swiper.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/venobox.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/simpleParallax.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/smooth-scroll.js' %}"></script>
+    <script src="{% static 'web/js/vendor/waypoints.min.js' %}"></script>
+    <script src="{% static 'web/js/vendor/wow.min.js' %}"></script>
+    <script src="{% static 'web/js/booking.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.15.3/dist/sweetalert2.all.min.js"></script>
+    <script src="{% static 'web/js/main.js' %}"></script>
+
+    <script src="{% static 'web/js/cart.js' %}"></script>
+    {% block javascript %}
+    {% endblock %}
+
+</body>
+
+</html>

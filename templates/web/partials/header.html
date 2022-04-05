@@ -1,0 +1,73 @@
+{% load static %}
+       
+    
+        <div class="site-preloader-wrap">
+            <div class="spinner"></div>
+        </div>
+
+        <header class="header">
+            <div class="primary-header-one primary-header">
+                <div class="container">
+                    <div class="primary-header-inner">
+                        <div class="header-right">
+                            <div class="search-icon dl-search-icon">
+                                <a href="{% url 'web:cart' %}" class="position-relative"> <i class="fa-solid fa-cart-shopping"></i> 
+                                    <span id="cartCount" class="cart-count"> {% if cartLength  %}{{cartLength}}{% else %} 0 {% endif %}</span></a></div>
+                            <a class="header-btn" href="https://wa.me/+966555021109">حجز<span></span></a>
+                            <!-- Burger menu -->
+                            <div class="mobile-menu-icon">
+                                <div class="burger-menu">
+                                    <div class="line-menu line-half first-line"></div>
+                                    <div class="line-menu"></div>
+                                    <div class="line-menu line-half last-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <div class="header-menu-wrap">
+                            <ul class="slider-menu text-end d-lg-block d-sm-none d-none">
+                                <li><a href="{% url 'web:contact' %}">اتصل بنا</a></li>
+                                <li><a href="{% url 'web:gallery' %}">معرض الغذاء</a></li>
+                                <li><a href="{% url 'web:menu' %}">قائمة</a></li>
+                                {% comment %}
+                                <li><a href="{% url 'web:about' %}">معلومات عنا</a></li>
+                                {% endcomment %}
+                                <li><a href="{% url 'web:index' %}">الصفحة الرئيسية</a></li>
+                            
+                            </ul>
+                            <ul class="slider-menu text-end d-lg-none d-sm-block d-block">
+                                <li><a href="{% url 'web:index' %}">الصفحة الرئيسية</a></li>
+                                {% comment %}
+                                <li><a href="{% url 'web:about' %}">معلومات عنا</a></li>
+                                {% endcomment %}
+
+                                <li><a href="{% url 'web:menu' %}">قائمة</a></li>
+                                <li><a href="{% url 'web:gallery' %}">معرض الغذاء</a></li>
+                                <li><a href="{% url 'web:contact' %}">اتصل بنا</a></li>
+                            
+                            </ul>
+                            
+
+                            
+                        </div><!-- /.header-menu-wrap -->
+                        <div class="header-logo">
+                           
+                          
+                            <a href="#">
+                                <img class="light" src="{% static 'web/img/riselogo.png' %}" alt="Logo"/>
+                                <img class="dark" src="{% static 'web/img/riselogo.png' %}" alt="Logo"/>  
+                            </a>
+                        </div><!-- /.header-logo -->
+                       
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <img src="{% static 'web/img/Line Pattern.png' %}" alt="" class="border-line-img d-lg-block  d-sm-none d-none">
+        <img src="{% static 'web/img/Line Pattermob.png' %}" alt="" class="border-line-img d-lg-none  d-sm-block d-block">
+
+{% block javascript %}
+<script src="{% static 'web/js/cart.js' %}"></script>
+
+{% endblock %}

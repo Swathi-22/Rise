@@ -1,0 +1,35 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="page-header">
+    <div class="bg-shape grey"></div>
+    <div class="container">
+        <div class="page-header-content">
+            <h4>معرض الغذاء</h4>
+            <h2 class="letter-space-1px">.الطعم الحقيقي على طاولتك</h2>
+            <p class="text-center">.نقدم لكم المذاق الحقيقي للأطعمة اللذيذة</p>
+        </div>
+    </div>
+</section>
+
+<section class="gallery-section bg-grey padding">
+    <div class="bg-shape white"></div>
+    <div class="container">
+        <div class="row">
+            {% for gallery in galleries %}
+            <div class="col-lg-4 col-sm-6 col-6 padding-15">
+                <div class="gallery-item">
+                    <img src="{{gallery.image.url}}" alt="img">
+                    <a class="img-popup" data-gall="gallery01" href="{{gallery.image.url}}"><i
+                            class="fas fa-expand"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="page-header">
+    <div class="bg-shape grey"></div>
+    <div class="container">
+        <div class="page-header-content">
+            <h4>عربة التسوق </h4>
+            <h2>طلبك </h2>
+            <p class="text-center">الغذاء هو أي مادة يتم تناولها لتوفير <br>.الدعم الغذائي للكائن الحي</p>
+        </div>
+    </div>
+</section>
+<!--/.page-header-->
+
+<section class="cart-section bg-grey padding">
+    <div class="container">
+        <div class="row cart-header">
+            <!-- #product  -->
+            <div class="col-lg-6">المنتوج</div> 
+            <!-- Quantity -->
+            <div class="col-lg-3">كمية</div>
+            <!-- Price -->
+            <div class="col-lg-1">السعر</div>
+            <!-- Total -->
+            <div class="col-lg-1">المجموع</div>
+
+            <div class="col-lg-1"></div>
+        </div>
+        {% for cart_item in cart_data %}
+        <div class="row cart-body pb-30" id="product-box{{cart_item.id}}">
+            <div class="col-lg-6">
+                <div class="cart-item">
+                    <img src="{{cart_item.image}}" alt="food">
+                    <div class="cart-content">
+                        <h3><a href="">{{cart_item.name}}</a></h3>
+                        <!-- <p>Food is any substance consumed to provide nutritional support for an organism.</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-lg-3">
+                <div class="cart-item">
+                    <form>
+                        {% csrf_token %}
+                        <input type="number"id="quantityId{{cart_item.id}}" onchange="updateQuantity('{{cart_item.id}}',this)" value="{{cart_item.quantity}}">
+                    </form>
+                </div>
+            </div>
+            <div class="col-3 col-lg-1">
+                <div class="cart-item">
+                    <p>ر.س {{cart_item.price}}</p>
+                </div>
+            </div>
+            <div class="col-3 col-lg-1">
+                <div class="cart-item">
+                    <p id="subTotalPrice{{cart_item.id}}">ر.س {{cart_item.sub_total}}</p>
+                </div>
+            </div>
+            <div class="col-2 col-lg-1" >
+                <div class="cart-item">
+                    <a class="remove"  onclick="deleteProduct('{{cart_item.id}}',this)" ><i class="las la-times"></i></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+{% if total %}
+        <div class="row">
+            <div class="col-lg-6 offset-lg-6">
+                <ul class="cart-total mt-30">
+                    <li> <span id="subTotal">ر.س {{total}}</span> <span> :المجموع</span> </li>
+                    <!-- <li><span>Estimated shipping:</span>$50</li> -->
+                    <!-- <li><span>Total:</span>$37.99</li> -->
+                    <li><a class="default-btn" onclick="addrForm()">الدفع<span></span></a></li>
+                </ul>
+                <input type="number" value="{{total}}" id="subTotalInputId" hidden>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<div class="col-md-12  col-lg-6 col-12  sm-padding adrsform" id="order-form-box">
+    <div class="product-details">
+        <div class="product-info text-end">
+            <div class="footer-widget booking-form booking-form-2">
+                <h3>ضع طلبك<span></span></h3>
+                <form  method="POST" id="" class="form-horizontal">
+                    {% csrf_token %}
+                    <div class="booking-form-group">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form-padding">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="اسمك" required>
+                                </div>
+                            </div>
+                           
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form-padding">
+                                    <input class="form-control" type="text" id="time" name="time" placeholder="الوقت المتوقع" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="b_submit " type="submit" class="book-btn d-flex" type="submit">إرسال</button>
+                    <div id="b-form-messages" class="alert" role="alert"></div>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+    $("#order-form-box").hide()
+</script>
+<script>
+    function addrForm(){
+        $("#order-form-box").show()
+
+    } 
+</script>
+{% endblock %}

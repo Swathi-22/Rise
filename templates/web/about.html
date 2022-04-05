@@ -1,0 +1,95 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+       
+
+        <section class="page-header">
+           <div class="bg-shape white"></div>
+            <div class="container">
+                <div class="page-header-content">
+                    <h4>معلومات عنا</h4>
+                    <h2>جرب الطعم  <br>الحقيقي اللذيذ</h2>
+                    <p class="text-center">.أفضل مكان للاستمتاع بالطعم الحقيقي للأطعمة اللذيذة</p>
+                </div>
+            </div>
+        </section><!--/.page-header-->
+
+        <!-- <section class="about-section inner padding">
+            <div class="bg-shape grey"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                   <div class="col-md-6">
+                       <div id="gallery-videos-demo" class="content-img-holder video-popup">
+                          <img src="{% static 'web/img/about02.png' %}" alt="img">
+                           <a class="play-btn" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=FVdr12UJbuM">
+                                <span class="play-icon"><i class="fas fa-play"></i></span>
+                            </a>
+                       </div>
+                   </div>
+                    <div class="col-md-6">
+                        <div class="about-info">
+                            <h2 class="mb-20">Caferio, Burgers, And <br>Best Pizzas <span>in Town!</span></h2>
+                            <p>The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng during the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by families.</p>
+                            <p>Food is any substance consumed to provide nutritional support for an organism. Everyone just loves italian foods, because its delicious.</p>
+                            <a href="#" class="default-btn">Order Now <span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!--/.about-section-->
+
+        <section class="content-section-2 bg-grey padding">
+           <div class="bg-shape white"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="section-heading " style="text-align: end;">
+                            <h4>لذيذ وصحي</h4>
+                            <h2 style="text-align: end;">استمتع بالطعم الحقيقي للطعام مع الارتفاع  </h2>
+                            <p class="" style="text-align: end;">
+                                رايز هو أحد المطاعم الرائدة في الرياض. نقدم أشهى الأطعمة الصحية وتغذي عقلك. استمتع بكل قضمة من طعامك بطعم دقيق ومكونات صحية
+                            </p>
+                            <!-- <img class="sign" src="{% static 'web/img/signature.png' %}" alt="sign"> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-img">
+                            <img src="{% static 'web/img/about03.png' %}" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--/.content-section-->
+
+      
+
+        <section class="content-section delivery">
+            <div class="bg-shape white"></div>
+            <div class="bg-shape grey"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="content-info text-end">
+                            <h2>أسرع خدمة توصيل للمنازل من الأطعمة اللذيذة</h2>
+                            <p>. يعمل مطعم رايز على تقديم أشهى المأكولات لجميع محبي الطعام. اطلب طعامك المفضل الآن وسنقوم بتوصيله إلى مكانك خلال فترة زمنية محدودة</p>
+                            <div class="order-content" style="justify-content: end;">
+                               <a href="{% url 'web:menu' %}" class="default-btn">اطلب الان <span></span></a>
+                                <!-- <h3><span>Order Number</span>012-345-6789</h3> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="delivery-girl">
+                            <img src="{% static 'web/img/delivery-girl.png' %}" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--/.content-section-->
+
+      
+       
+
+    {% endblock %}

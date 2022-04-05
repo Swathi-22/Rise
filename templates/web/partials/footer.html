@@ -1,0 +1,88 @@
+{% load static %}
+
+   <footer class="footer-section">
+    <div class="footer-top">
+        <div class="footer-illustration"></div>
+        <div class="running-cycle"><div></div></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-sm-6 sm-padding text-sm-center">
+                    <div class="quick-link-head">
+                        <h3><span class="quick-link-span"></span> روابط سريعة</h3>
+                    </div>
+                    <div>
+                        <ul class="ul-style contact-info-list">
+                            <li><a href="{% url 'web:index' %}" class="footer-a">الصفحة الرئيسية</a></li>
+                            {% comment %}
+                            <li><a href="{% url 'web:about' %}" class="footer-a">معلومات عنا</a></li>
+                            {% endcomment %}
+
+                            <li><a href="{% url 'web:menu' %}" class="footer-a">قائمة</a></li>
+                            <li><a href="{% url 'web:gallery' %}" class="footer-a">معرض الغذاء</a></li>
+                            <li><a href="{% url 'web:contact' %}" class="footer-a">اتصل بنا</a></li>
+                            
+                        </ul>
+                    </div>
+
+                  
+                </div>
+                <div class="col-lg-7 col-sm-6 sm-padding text-center">
+                    <div class="footer-widget">
+                        <h3><span></span> معلومات الاتصال </h3>
+                        <ul class="contact-info-list">
+                            <li>,طريق الرياض - مكة</li>
+                              <li>بجوار محطة الجعيدي </li>  
+                               <li>, مطعم: 0555028290 | 0555028616 |</li> 
+                               <li>0555021109</li> 
+                                <li>المطبخ : 0555069926 | 0555061088</li>
+                               <li>الحجوزات: 8101760 | 8108380 | 8106116</li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-3 col-sm-6 sm-padding">
+                    <div class="footer-widget" style="text-align: -webkit-right;">
+                        <a class="logo" href="#"><img src="{% static 'web/img/logo 33.svg' %}" alt="img" style="height:100px"></a>
+                        <p style="text-align:end;">رايز كورنر هو مطعم رائد مقره في السعودية ، الإمارات العربية المتحدة يقدم وليمة لذيذة لجميع عشاق الطعام</p>
+                        <p><a href="tel:+9669200220686" class="ph-color">9200220686 <i class="fa-solid fa-phone-flip"></i></a></p>
+                        <ul class="footer-social" style="text-align:end;">
+                            
+                            
+                            <li><a href="https://www.facebook.com/%D9%85%D8%B7%D8%A7%D8%B9%D9%85-%D9%88%D9%85%D8%B7%D8%A7%D8%A8%D8%AE-%D8%B2%D8%A7%D9%88%D9%8A%D8%A9-%D8%B1%D8%A7%D9%8A%D8%B2-1687512247948847/"><i class="fab fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/MathamRise"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/matham.rise/?hl=en"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                
+
+                
+                
+                <!-- <div class="col-lg-3 col-sm-6 sm-padding">
+                    <div class="footer-widget ml-25">
+                        <h3>Opening Hours <span></span></h3>
+                        <ul class="opening-hours-list">
+                            <li>Monday-Friday: 08:00-22:00</li>
+                            <li>Tuesday4PM:  Till Mid Night</li>
+                            <li>Saturday: 10:00-16:00</li>
+                        </ul>
+                    </div>
+                </div> -->
+               
+            </div>
+        </div>
+    </div><!--/.footer-top -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="copyright-wrap">
+                <p>© <span id="currentYear"></span>.رايز جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </div><!--/.footer-bottom -->
+</footer><!--/.footer-section -->
+
+<div id="scrollup">
+    <button id="scroll-top" class="scroll-to-top"><i class="las la-arrow-up"></i></button>
+</div>
